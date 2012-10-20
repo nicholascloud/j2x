@@ -4,7 +4,7 @@ var fs = require('fs'),
   assert = require('chai').assert,
   j2x = require('../j2x');
 
-var ALBUMS_PATH = path.join(__dirname, 'fake', 'artists.json');
+var ALBUMS_PATH = path.join(__dirname, 'fake', 'albums.json');
 
 describe('j2x', function () {
 
@@ -24,7 +24,7 @@ describe('j2x', function () {
   });
 
   it('should spit out xml', function (done) {
-    j2x(data, function (err, xml) {
+    j2x(data, 'albums', function (err, xml) {
       if (err) return done(err);
       assert.isTrue(xml.length > 0);
       console.log(xml);
