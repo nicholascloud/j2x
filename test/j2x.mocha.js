@@ -4,7 +4,7 @@ var fs = require('fs'),
   assert = require('chai').assert,
   j2x = require('../j2x');
 
-var ALBUMS_PATH = path.join(__dirname, 'fake', 'albums.json');
+var ALBUMS_PATH = path.join(__dirname, 'fixture', 'albums.json');
 
 describe('j2x', function () {
 
